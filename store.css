@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #f0f0f0;
-    
+    box-sizing: border-box;
 }
 
 header .first-container nav ul{
@@ -81,7 +81,7 @@ header .second-container ul li {
     padding: 2px 8px;
     border: none;
     border-radius: 4px;
-    background-color: slateblue;
+    background-color: #3349C0;
     color: white; 
 }
 
@@ -95,10 +95,7 @@ a{
 
 
 
-.hero{
-    border: 3px solid #fff;
-    
-}
+
 
 .hero img{
     max-width: 100%;
@@ -108,34 +105,28 @@ a{
 .sidebar-and-gallery{
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 0;
+    margin: 10px auto;
     background-color: #f0f0f0;
+    justify-content: center;
+    align-items: center;
 }
 
-.sidebar-and-gallery span{
-    display: inline-flex;
+.sidebar-and-gallery nav{
+    display: inline-block;   
 }
 
 .side-bar{
-    width: 20%;
+    width: fit-content;
     height: fit-content;
     vertical-align: top;
     padding: 10px 20px 20px 20px;
-    margin: 0 10px;
+    margin: 0 30px;
     background-color: #fff;
     box-sizing: border-box;
     box-shadow: 1px 1px rgba(0, 0, 0, .2);
 }
 
-@media only screen and (max-width: 720px) {
-    .side-bar{
-        width: 40%;
-    }
-
-    .gallery{
-        width: 50%
-    }
-}
 
 .side-bar ul li {
     display: flex;
@@ -160,19 +151,105 @@ a{
     color: blue;
 }
 
+#slider{
+    max-width: 100%;
+}
+
+.slider-container{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    max-width: 30%;
+    margin: 0 10px;
+
+}
+
+.range-container{
+    width: 28%;
+    height: fit-content;
+    padding: 3px 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px rgba(0, 0, 0, .3);
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.range{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.price{
+    margin: 0 5px 0 0;
+}
+
+.sort{
+    text-align: right;
+    padding: 5px;
+    font-size: 18px;
+    width: fit-content;
+    float: right;
+   position: relative;
+}
+
+.sorting{
+    margin: 8px 0;
+}
+
+#preference{
+    padding: 5px 8px 5px 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, .3);
+    border: none;
+    appearance: none;
+    background-color: transparent;
+    
+}
+
+.fa-solid{
+    color: #3349C0;
+    font-size: 20px;
+    position: absolute;
+    right: 78%;
+    top: 52%;
+}
+
+.user-preference{
+    display: flex;
+    margin: 1rem 14%;
+    justify-content: space-between;
+}
+
+.range-and-price{
+    min-width: 90%;
+}
+
+.gallery-container{
+    width: 80%;
+    box-shadow: 1px 1px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    margin: 0 0 30px 0;
+    
+}
+
+.gallery-top{
+    margin: 5px 10%;
+    padding: 0.5px;
+    border: 1px solid black;
+    background-color: black;
+}
+
 .gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    float: right;
-    justify-content: center;
-    align-items: center;
-    max-width: 75%;
+    width: 100%;
     margin: 0;
-    padding: 20px 20px 40px 20px;
+    justify-content: center;
     background-color: #fff;
-    gap: 35px;
-    box-shadow: 1px 1px rgba(0, 0, 0, .2);
+   
 }
 
  
@@ -180,14 +257,16 @@ a{
     background-color: #f5f6f1;
     padding: 0 0 10px;
     border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
     box-shadow: 1px 1px rgba(0, 0, 0, .2);
+    margin: 1rem;
 }
 
   
 .gallery .book figure img{
     max-width: 100%;
-    height: auto;
-    
+    height: auto;    
   }
 
   figcaption{
@@ -220,6 +299,31 @@ a{
   }
 
 
+.gallery-navigation{
+    display: block;
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+}
+
+
+.page{
+    border: 1px solid black;
+    padding: 2px 8px;    
+}
+
+.prev, .next{
+    margin: 0 15px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+
+}
 
   .checked {
     color: red;
@@ -234,130 +338,74 @@ a{
 
 
 
+/* footer section statrts here*/
+
 footer{
-    background-color: slateblue;
+    background-color: #3349C0;
     color: #f0f0f0;
     width: 100%;
-    height:fit-content;
-    padding: 10px 0 20px 0;   
+    height: fit-content;
+    padding: 10px 0 20px 0;
+    
 }
 
 .footer-container{
-    width: 100%;
-    
-}
-
-.footer-container::before,
-.footer-container::after{
-
-    content: "";
-    display: table;
-    clear: both;
-}
-
-footer .footer-container div {
-    float: left;
-    
-}
-
-footer .footer-container .form-container{
-    width: 100% auto;
+    display: flex;
     justify-content: center;
-    text-align: center;
-}
+    gap: 14%;
 
-footer .footer-container .footer-menu {
-
-    width: 100% auto;
-    margin: 2% 4%;
-}
-
-footer .footer-container .footer-menu ul li{
-    margin-left: 4%;
-}
-
-.our-pages{
-    font-size: 20px;
-    font-weight: 700;
-    margin: auto;
-    text-align: left;
-}
-
-footer .footer-container .our-contact-details{
-    width: 100% auto;
-    margin: 2% 2%;
-}
-
-.our-contact-details ul {list-style-type: none;}
-
-
-
-footer .footer-container .terms{
-    
-    width:100% auto; 
-    margin: 2% 2%;
-    
-}
-
-.our-contact-details ul li{
-    font-size: 16px;
-    margin: 2% 0;
-}
-
-.terms ul{list-style-type: none;}
-
-.terms ul li{
-    font-size: 16px;
-    margin: 2% 0;
-    
-}
-
-.form-container{
-    margin: 2% 2%;
 }
 
 .form-container form{
     display: flex;
     flex-direction: column;
 }
+
 .contact-us{
     font-size: 20px;
     font-weight: 700;
-    margin: 1% 2% 1% 0;
+    margin: 2% 0 1% 0;
     
-}
-
-.footer-hr{
-    width: 100%;
-}
-
-input{
-    height: 30px;
-    padding: 2px 8px;
-    border: 1px solid slateblue;
-    width: 75%;
-    margin: 0.2rem 1rem;
-    outline: none;
-}
-
-textarea{
-    border: 1px solid slateblue;
-    padding: 2px 8px;
-    width: 75%;
-    margin: 0 1rem;
-    outline: none;
-
 }
 
 .contact-btn{
     width: fit-content;
     height: fit-content;
-    padding: 4px 10px;
-    margin: 0.2rem 1rem;
+    padding: 8px 25px;
+    margin: 0.5rem 0;
     color:white;
     background-color: black;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
+}
+
+
+input{
+    height: 30px;
+    padding: 2px 8px;
+    border: 1px solid black;
+    margin: 0.5rem 0;
+}
+
+.our-pages{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 2%;
+}
+
+.footer-menu ul li{
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+footer .footer-container .our-contact-details, footer .footer-container .terms{
+    margin: 2% 0;
+    font-size: 20px;
+}
+
+.our-contact-details ul, .terms ul{
+    list-style-type: none;
 }
 
 
@@ -366,14 +414,20 @@ textarea{
     background-color: rgb(2, 2, 58);
     height: 25px;
     border: none;
+    vertical-align: middle;
     
+}
+
+.copy-right .copy-right-para img{
+    max-width: 2%;
+    height: auto;
 }
 
 .copy-right-para{
     color: #f0f0f0;
     font-size: 12px;
     text-align: center;
-    padding: 4px 0 0 0;
+    vertical-align: middle;
     
 }
 
@@ -389,12 +443,12 @@ textarea{
 }
 
 .social-icons a img{
-    max-width: 5%;
+    max-width: 100%;
     height: auto;
-    border: 5px solid black;
+    border: 2px solid black;
     display: inline;
     float: right;
-    margin: 1%;
+    margin: 0.5%;
 }
 
 #facebook-logo{
