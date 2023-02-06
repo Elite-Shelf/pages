@@ -6,7 +6,7 @@
     <title>EliteShelf-book_store</title>
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="store.css">
   </head>
   <body>
@@ -24,7 +24,7 @@
                             <li><a href="login.html">Login</a></li>
                             <li><a href="Publisher.html">Publisher</a></li>
                             <li><a href="Favorites.html"><img src="./images/Fav_icon.png" alt="Favorites Icon"></a></li>
-                            <li><a href="Cart.html"><img src="./images/cart.png" alt=""></a></li>
+                            <li><a href="cart.html"><img src="./images/cart.png" alt=""></a></li>
                         </ul>
                     </nav>
                     
@@ -47,7 +47,7 @@
             </section>
 
             <section class="sidebar-and-gallery">
-                <span class="side-bar">
+                <nav class="side-bar">
                 <ul>
                     <li><a href="trending.html">Trending</a></li>
                     <li><a href="best-sellers.html"><span class="bestsellers">Bestsellers</span></a></li>
@@ -67,57 +67,87 @@
                     <li><a href="text-books.html">Text Books</a></li>
                     <li><a href="children.html">Children</a></li>
                     <li><a href="young-adults.html">Young Adults</a></li></ul>
-                </span>
+                </nav>
 
-                <span class="gallery">
-                    
-                    <div class="book"><figure><img src="./images/Book 1.png" alt="Book 1"><figcaption>How innovation works<br>Matt Ridley<br>
+                <nav class="gallery-container">
+            <div class="user-preference">
+                <div class="range-and-price">
+                    <div class="slider-container">
+                        <p class="price">Price</p>
+                        <input type="range" id="slider" min="500" max="3000" step="1" value="2000" reasdonly />
+                    </div>
+                    <div class="range-container">
+                        <article class="range">
+                            <p class="min">500</p>
+                            <p class="dash">-</p>
+                            <p class="max">3000</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="sort">
+                    <p class="sorting">Sort by</p>
+                    <i class="fa-solid fa-caret-down"></i>
+                    <select name="preference" id="preference">
+                        <option value="Relevance">Relevance</option>
+                    </select>
+                </div>
+                
+            </div>
+            <hr class="gallery-top">
+                    <div class="gallery">
+                    <div class="book"><figure><img src="./images/Book 1.png" alt="Book 1"><figcaption>How innovation works<br><small>Matt Ridley</small><br>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star unchecked"></span>
-                        <span class="fa fa-star unchecked"></span><br><b>₦1,800</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                        <div class="book"><figure><img src="./images/Book 2.png" alt="Book 1"><figcaption>Psychology of money<br>Morgan Housel<br>
+                        <span class="fa fa-star unchecked"></span><br><b>$3.12</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+
+                        <div class="book"><figure><img src="./images/Book 2.png" alt="Book 1"><figcaption>Psychology of money<br><small>Morgan Housel</small><br>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star unchecked"></span>
                         <span class="fa fa-star unchecked"></span>
-                        <span class="fa fa-star unchecked"></span><br><b>₦1,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                        <div class="book"><figure><img src="./images/Book 3.png" alt="Book 1"><figcaption>The Picture of Dorian Gray<br>Oscar Wilde<br>
+                        <span class="fa fa-star unchecked"></span><br><b>$2.20</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+
+                        <div class="book"><figure><img src="./images/Book 3.png" alt="Book 1"><figcaption>The Picture of Dorian Gray<br><small>Oscar Wilde</small><br>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <i class="fa fa-star-half-full"></i>
-                        <span class="fa fa-star unchecked"></span><br><b>₦2,500</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                        <div class="book"><figure><img src="./images/Book 4.png" alt="Book 1"><figcaption>Company of One<br>Paul Jarvis<br>
+                        <span class="fa fa-star unchecked"></span><br><b>$4.10</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+
+                        <div class="book"><figure><img src="./images/Book 4.png" alt="Book 1"><figcaption>Company of One<br><small>Paul Jarvis<small><br>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star unchecked"></span>
-                        <span class="fa fa-star unchecked"></span><br><b>₦2,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                        <div class="book"><figure><img src="./images/Book 9.png" alt="Book 1"><figcaption>101 Essays<br>Brianna West<br>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>      
-                            <span class="fa fa-star checked"></span><i class="fa fa-star-half-full"></i><br><b>₦4,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                            <div class="book"><figure><img src="./images/Book 10.png" alt="Book 1"><figcaption>The Two Towers<br>J.R.R. Tolkien<br>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star unchecked"></span><br><b>₦3,500</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                            <div class="book"><figure><img src="./images/Book 9.png" alt="Book 1"><figcaption>101 Essays<br>Brianna West<br>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>      
-                            <span class="fa fa-star checked"></span><i class="fa fa-star-half-full"></i><br><b>₦4,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+                        <span class="fa fa-star unchecked"></span><br><b>$3.00</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
 
-                            <div class="book"><figure><img src="./images/Book 5.png" alt="Book 1"><figcaption>Vampires<br><small>Christopher Frayling</small><br>
+                        <div class="book"><figure><img src="./images/Book 9.png" alt="Book 1"><figcaption>101 Essays<br><small>Brianna West</small><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>      
+                            <span class="fa fa-star checked"></span><i class="fa fa-star-half-full"></i><br><b>$4.50</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+
+                        <div class="book"><figure><img src="./images/Book 10.png" alt="Book 1"><figcaption>The Two Towers<br><small>J.R.R. Tolkien</small><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span><br><b>$4.20</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+                        
+                        <div class="book"><figure><img src="./images/Book 9.png" alt="Book 1"><figcaption>101 Essays<br><small>Brianna West</small><br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>      
+                            <span class="fa fa-star checked"></span><i class="fa fa-star-half-full"></i><br><b>$4.50</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+
+                        <div class="book"><figure><img src="./images/Book 5.png" alt="Book 1"><figcaption>Vampires<br><small>Christopher Frayling</small><br>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star unchecked"></span>
                             <span class="fa fa-star unchecked"></span>
-                            <span class="fa fa-star unchecked"></span><br><b>₦1,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+                            <span class="fa fa-star unchecked"></span><br><b>$2.34</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
                             <div class="book"><figure><img src="./images/Book 7.png" alt="Book 1"><figcaption>Stupore E Tremori<br><small>Amelie Nothomb</small>
                             
                             <br>
@@ -125,40 +155,44 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star unchecked"></span>
-                            <span class="fa fa-star unchecked"></span><br><b>₦1,500</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                            <div class="book"><figure><img src="./images/Book 8.png" alt="Book 1"><figcaption>The Two Towers<br><small>J.R.R. Tolkien</small><br>
+                            <span class="fa fa-star unchecked"></span><br><b>$3.78</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+                            
+                        <div class="book"><figure><img src="./images/Book 8.png" alt="Book 1"><figcaption>The Two Towers<br><small>J.R.R. Tolkien</small><br>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                                                                
-                            <span class="fa fa-star unchecked"></span><br><b>₦3,900</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                            <div class="book"><figure><img src="./images/Book 4.png" alt="Book 1"><figcaption>Company of One<br>Paul Jarvis<br>
+                            <span class="fa fa-star checked"></span>                      
+                            <span class="fa fa-star unchecked"></span><br><b>$4.20</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+                            
+                        <div class="book"><figure><img src="./images/Book 4.png" alt="Book 1"><figcaption>Company of One<br>Paul Jarvis<br>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star unchecked"></span>
-                            <span class="fa fa-star unchecked"></span><br><b>₦2,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                            <div class="book"><figure><img src="./images/Book 9.png" alt="Book 1"><figcaption>101 Essays<br>Brianna West<br>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>      
-                            <span class="fa fa-star checked"></span><i class="fa fa-star-half-full"></i><br><b>₦4,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                            <div class="book"><figure><img src="./images/Book 10.png" alt="Book 1"><figcaption>The Two Towers<br>J.R.R. Tolkien<br>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star unchecked"></span><br><b>₦3,900</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
-                            <div class="book"><figure><img src="./images/Book 9.png" alt="Book 1"><figcaption>101 Essays<br>Brianna West<br>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>      
-                            <span class="fa fa-star checked"></span><i class="fa fa-star-half-full"></i><br><b>₦4,000</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+                            <span class="fa fa-star unchecked"></span><br><b>$3.00</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
                             
-                        </span>
+                        <div class="book"><figure><img src="./images/Book 9.png" alt="Book 1"><figcaption>101 Essays<br>Brianna West<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>      
+                            <span class="fa fa-star checked"></span><i class="fa fa-star-half-full"></i><br><b>$4.50</b><br><button class="quantity-btn">- 1  +</button><button class="cart-btn">Add to cart</button></figcaption></figure></div>
+                            
+                        
 
-                                    
+                            <div         class="gallery-navigation">
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+
+                                <a href="#" class="page one">1</a>
+                                <a href="book-gallery-pg2" class="page two">2</a>
+                                <a href="book-gallery-pg3" class="page three">3</a>
+                                <a href="book-gallery-pg4" class="page n">...</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+     
+                            </div>
+
+                           
+                        </nav>      
 
             </section>
 
@@ -167,7 +201,7 @@
             <footer>
 
                 <div class="footer-container">
-                    <div class="form-container">
+                    <nav class="form-container">
                         <form action="#">
                         <p class="contact-us">Contact Us</p>
                         <input type="text" name="name" placeholder="Full Name">
@@ -175,9 +209,9 @@
                         <textarea name="user-message" id="user-msg" cols="18" rows="4" placeholder="Message"></textarea>
                         <button class="contact-btn">Submit</button>
                         </form>
-                    </div>
+                    </nav>
                 
-                <div class="footer-menu">
+                <nav class="footer-menu">
                     <p class="our-pages">All our pages</p>
                     <ul>
                         <li>Home</li>
@@ -189,55 +223,50 @@
                         <li>About Us</li>
                         <li>FAQ</li>
                     </ul>
-                </div>
-                <div class="our-contact-details">
+                </nav>
+                <nav class="our-contact-details">
                     <ul>
                         <li><hr class="footer-hr"></li>
                         <li><p>+234 817 849 5978</p></li>
                         <li><p>eliteshelf054@gmail</p></li>
                 </ul>
-                </div>
-                <div class="terms">
+            </nav>
+                <nav class="terms">
                     <ul>
                         <li><hr class="footer-hr"></li>
                         <li>Terms of Use</li>
                         <li>Privacy Poicy</li>
                     </ul>
-
+        
+                </nav>
                 </div>
-                </div>
-
+        
                 <div class="social-icons">
                     <a href="https://www.facebook.com/100089638351674/"><img src="./images/facebook.png" alt="Facebook Logo"
                         id="facebook-logo"></a>
-
+        
                 <a href="https://twitter.com/elite_shelf?t=WQUEaAKjreWCaiivP2CJDA&s=09"><img src="./images/twiter.png"
                         alt="Twiter Logo"></a>
-
+        
                 <a href="https://www.instagram.com/invites/contact/?i=w4mrh0fw73u6&utm_content=qepfrl1"><img
                         src="./images/instagram.png" alt="Instagram Logo"></a>
-
+        
                 <a href="https://www.linkedin.com/in/elite-shelf"><img src="./images/LinkedIn.png" alt="LinkedIn Logo"
                         id="linkedin-logo"></a>
                 </div>
-
+        
                 <br><br><br><br>
-
+        
                 
                     
             </footer> 
-      
-      <h1 style="background-color: orange; color: #f0f0f0"> Work still in progress...</h1>
             
             <div class="copy-right">
-                <p class="copy-right-para"><span class="copy-c">&copy</span> Copyright 2023 All Rights Reserved Elite Shelf</p>
+                <p class="copy-right-para"><span class="copy-c"><img src="./images/copyright-solid.png" alt=""></span> Copyright 2023 All Rights Reserved Elite Shelf</p>
             </div>
                 
             <br><br><br>
         
-
-   
-
-    </div>
-  </body>
-</html>
+            </div>
+        </body>
+        </html>
